@@ -1,124 +1,161 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Zerando CSS */
+
+* {
     margin: 0;
     padding: 0;
-    background-color: black;
+    box-sizing: border-box;
 }
+
+
+/* Fundo-tela */
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/img5.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+/* Menu - Header - NavBar */
 
 header {
-    color: white;
-    padding: 20px;
-    text-align: center;
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.2);
 }
 
-img{
-    max-width: 50%;
-}
-
-.headers{
-    background-color: white;
-    height: 5rem;
-    color: black;
-}
-
-.planos{
-    color: red;
-}
-
-#plans {
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 20px;
-    background: white;
-    color: black;
-    gap: 0.3rem;
+    align-items: center;
+    font-size: 1.8rem;
 }
 
-.plan {
-    background: red;
-    color: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    width: 30%;
-}
-
-#contact {
-    padding: 20px;
-    background: white;
-    color: black;
-    text-align: center;
-}
-
-#contactForm{
-    text-align: left;
-}
-
-#alinhamento{
-margin-left: 19rem;
-}
-
-form {
-    background-color: black;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-label {
-    margin-bottom: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-}
-
-input, textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    width: 6rem;
-    font-size: large;
-    padding: 1rem;
-    background: white;
-    color: black;
-    border: 0.1rem solid black;
-    border-radius: 0.5rem;
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
     cursor: pointer;
-    marging-left: 60%;
 }
 
-button:hover {
-    color: white;
-    font-weight: bold;
-    background-color: black;
-    border:0.1rem solid white;
-}
-
-footer {
+.menu-content .list-itens {
     display: flex;
-    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+    transition: all 1.5s ease; 
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+/* Centro - Conteudo Principal */
+
+main {
+    height: 93vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    height: 6rem;
-    background: black;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Textos conteudo principal */
+
+.primary-text {
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.second-text {
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+}
+
+/* Botões */
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
     color: white;
-    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns button:hover {
+    /* color: rgb(251, 255, 0); */
+    color: white;
+    border: none;
+}
+
+.btns button:before {
+    content: ' ';
+    border-radius: 20px;
     bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: red;
+    /* background-color: rgb(61, 61, 61); */
+    z-index: -1;
+    transition: 1s;
+}
+
+.btns button:hover:before {
     width: 100%;
-    height: 8rem;
 }
-
-div{
-    /* border-right: 0.1rem solid white; */
-    text-align: center;
-    padding: 1rem;
-}
-
